@@ -1,0 +1,6 @@
+{
+  "name": "Premium Crypto Platform",
+  "description": "A high-performance premium cryptocurrency trading dashboard with real-time market simulation, advanced interactive portfolio analytics, secure simulated wallet, and Gemini AI-assisted financial advising.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

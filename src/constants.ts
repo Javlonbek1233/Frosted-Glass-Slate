@@ -1,0 +1,197 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { Coin, UserProfile } from './types';
+
+export const INITIAL_COINS: Coin[] = [
+  {
+    id: 'bitcoin',
+    name: 'Bitcoin',
+    symbol: 'BTC',
+    price: 67421.50,
+    change24h: 3.42,
+    volume24h: 31205940000,
+    marketCap: 1324859000000,
+    high24h: 68150.00,
+    low24h: 65120.00,
+    history1d: [65120, 65400, 65900, 65750, 66100, 66300, 66800, 67200, 67050, 67421.5],
+    history7d: [
+      { date: 'Mon', price: 63200 },
+      { date: 'Tue', price: 64100 },
+      { date: 'Wed', price: 63800 },
+      { date: 'Thu', price: 65400 },
+      { date: 'Fri', price: 66200 },
+      { date: 'Sat', price: 65850 },
+      { date: 'Sun', price: 67421.50 },
+    ],
+    balance: 1.4152,
+    color: '#f59e0b', // Amber
+  },
+  {
+    id: 'ethereum',
+    name: 'Ethereum',
+    symbol: 'ETH',
+    price: 3482.75,
+    change24h: 1.84,
+    volume24h: 14892010000,
+    marketCap: 418509000000,
+    high24h: 3550.00,
+    low24h: 3390.00,
+    history1d: [3390, 3410, 3430, 3420, 3450, 3440, 3465, 3490, 3470, 3482.75],
+    history7d: [
+      { date: 'Mon', price: 3210 },
+      { date: 'Tue', price: 3280 },
+      { date: 'Wed', price: 3260 },
+      { date: 'Thu', price: 3340 },
+      { date: 'Fri', price: 3410 },
+      { date: 'Sat', price: 3390 },
+      { date: 'Sun', price: 3482.75 },
+    ],
+    balance: 14.85,
+    color: '#06b6d4', // Cyan
+  },
+  {
+    id: 'solana',
+    name: 'Solana',
+    symbol: 'SOL',
+    price: 154.20,
+    change24h: 7.62,
+    volume24h: 3841500000,
+    marketCap: 69402000000,
+    high24h: 156.40,
+    low24h: 141.90,
+    history1d: [141.9, 143.2, 145.8, 144.5, 147.1, 149.3, 151.2, 154.0, 152.8, 154.2],
+    history7d: [
+      { date: 'Mon', price: 131.5 },
+      { date: 'Tue', price: 135.2 },
+      { date: 'Wed', price: 133.4 },
+      { date: 'Thu', price: 141.8 },
+      { date: 'Fri', price: 145.0 },
+      { date: 'Sat', price: 143.6 },
+      { date: 'Sun', price: 154.2 },
+    ],
+    balance: 55.40,
+    color: '#a855f7', // Purple
+  },
+  {
+    id: 'chainlink',
+    name: 'Chainlink',
+    symbol: 'LINK',
+    price: 15.82,
+    change24h: -1.24,
+    volume24h: 532400000,
+    marketCap: 9284000000,
+    high24h: 16.20,
+    low24h: 15.45,
+    history1d: [16.1, 15.95, 15.8, 15.85, 15.7, 15.6, 15.55, 15.75, 15.9, 15.82],
+    history7d: [
+      { date: 'Mon', price: 14.8 },
+      { date: 'Tue', price: 15.1 },
+      { date: 'Wed', price: 15.3 },
+      { date: 'Thu', price: 16.4 },
+      { date: 'Fri', price: 16.1 },
+      { date: 'Sat', price: 15.9 },
+      { date: 'Sun', price: 15.82 },
+    ],
+    balance: 312.0,
+    color: '#3b82f6', // Cyber Blue
+  },
+  {
+    id: 'cardano',
+    name: 'Cardano',
+    symbol: 'ADA',
+    price: 0.445,
+    change24h: -2.31,
+    volume24h: 421000000,
+    marketCap: 15840000000,
+    high24h: 0.462,
+    low24h: 0.438,
+    history1d: [0.458, 0.455, 0.451, 0.448, 0.442, 0.440, 0.439, 0.444, 0.446, 0.445],
+    history7d: [
+      { date: 'Mon', price: 0.412 },
+      { date: 'Tue', price: 0.428 },
+      { date: 'Wed', price: 0.422 },
+      { date: 'Thu', price: 0.456 },
+      { date: 'Fri', price: 0.448 },
+      { date: 'Sat', price: 0.452 },
+      { date: 'Sun', price: 0.445 },
+    ],
+    balance: 2450.0,
+    color: '#1d4ed8', // Darker blue
+  },
+  {
+    id: 'usd-coin',
+    name: 'USD Coin',
+    symbol: 'USDC',
+    price: 1.00,
+    change24h: 0.00,
+    volume24h: 6204900000,
+    marketCap: 34105000000,
+    high24h: 1.002,
+    low24h: 0.998,
+    history1d: [1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00],
+    history7d: [
+      { date: 'Mon', price: 1.00 },
+      { date: 'Tue', price: 1.00 },
+      { date: 'Wed', price: 1.00 },
+      { date: 'Thu', price: 1.00 },
+      { date: 'Fri', price: 1.00 },
+      { date: 'Sat', price: 1.00 },
+      { date: 'Sun', price: 1.00 },
+    ],
+    balance: 12450.0,
+    color: '#10b981', // Emerald Space
+  },
+];
+
+export const INITIAL_PROFILE: UserProfile = {
+  username: 'Sarah Connor',
+  email: 's.connor@cyberdyne.net',
+  tier: 'apex-platinum',
+  kycCertified: true,
+  securityScore: 98,
+  twoFactorEnabled: true,
+  addresses: {
+    BTC: 'bc1qm3s8hglf6s8x7dlae8fs8pka9skdnwq08asxyp',
+    ETH: '0x8A17c5b6ff8c56d25Fe9dfb7d6E0D2C8c39e24Fe',
+    SOL: '8e8qf398AhGfkDlwka9Flas98sJp2ks9skdn2p10Sg',
+    USDC: '0x8A17c5b6ff8c56d25Fe9sub7d6E0D2C8c39e248b',
+  },
+};
+
+export const CRYPTO_NEWS_HEADLINES = [
+  {
+    id: '1',
+    source: 'Aetheris Terminal',
+    time: '15m ago',
+    title: 'Aetheris AI forecasts sudden liquidity migration to decentralized L3 protocols.',
+    category: 'Analysis',
+    sentiment: 'bullish',
+  },
+  {
+    id: '2',
+    source: 'Cyberdyne Fin',
+    time: '1h ago',
+    title: 'Solana active network validators reach an all-time-high as TVL surges past $5.8B.',
+    category: 'Network',
+    sentiment: 'bullish',
+  },
+  {
+    id: '3',
+    source: 'Securities Network',
+    time: '3h ago',
+    title: 'Macro interest adjustments predicted to generate extreme volatility across digital assets.',
+    category: 'Macro',
+    sentiment: 'volatile',
+  },
+  {
+    id: '4',
+    source: 'Aetheris Terminal',
+    time: '5h ago',
+    title: 'Bitcoin institutional holdings set sequential inflow record in consecutive quarters.',
+    category: 'Institutional',
+    sentiment: 'bullish',
+  },
+];
